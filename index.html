@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,32 +14,42 @@
     <script type="text/javascript" src="./script.js"></script>
     <title>Alura Dev</title>
 </head>
+
 <body>
-    
+
     <div class="grid-container">
         <div class="item">
             <div class="flex-header">
                 <img src="/assets/Logo.svg" class="logo-style" alt="logo">
-                <input type="text" class="input-style" placeholder="Busque por algo ..." >
-                    <a href="profile.html" class="profile-link" id="profileHidden"> <img src="/assets/image_icon.jpg" class="img-user-style">Luiz Eduardo</a>
-                    <button class="openbtn" onclick="openNav()"> ☰ </button> 
-                    <div class="sidepanel" id="mysidepanel">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                        <a href="profile.html" class="profile-link"> <img src="/assets/image_icon.jpg" class="img-user-style">Luiz Eduardo</a>
-                        <h1 class="sidebar-title">Menu</h1>
-                        <a href="index.html" class="menu-link"><img src="/assets/Icon.svg">  Editor de codigo</a>
-                        <a href="index.html" class="menu-link"><img src="/assets/Iconpg_2.svg"> Comunidade</a>
-                    </div> 
-           </div>   
+                <input type="text" class="input-style" id="searchHidden" placeholder="Busque por algo ...">
+                <a href="profile.html" class="profile-link" id="profileHidden"> <img src="/assets/image_icon.jpg"
+                        class="img-user-style">Luiz Eduardo</a>
+
+                <!-- Menu Responsivo-->    
+                <button class="opensearch" id="myopensearch" onclick="openSearch()"> <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.7263 17.2913L15.8322 13.3971C15.6564 13.2214 15.4182 13.1237 15.1682 13.1237H14.5315C15.6096 11.7449 16.2501 10.0107 16.2501 8.12421C16.2501 3.63636 12.6138 0 8.12592 0C3.63807 0 0.00170898 3.63636 0.00170898 8.12421C0.00170898 12.612 3.63807 16.2484 8.12592 16.2484C10.0125 16.2484 11.7467 15.6079 13.1254 14.5298V15.1665C13.1254 15.4165 13.2231 15.6547 13.3988 15.8305L17.293 19.7246C17.6601 20.0918 18.2538 20.0918 18.6171 19.7246L19.7224 18.6193C20.0896 18.2521 20.0896 17.6584 19.7263 17.2913ZM8.12592 13.1237C5.36447 13.1237 3.1264 10.8896 3.1264 8.12421C3.1264 5.36276 5.36056 3.12469 8.12592 3.12469C10.8874 3.12469 13.1254 5.35885 13.1254 8.12421C13.1254 10.8857 10.8913 13.1237 8.12592 13.1237Z" fill="white"/>
+                    </svg></button>    
+                    <div class="top-panel" id="mytop-panel">
+                    <a href="javascript:void(0)" class="closesearch" onclick="closeSearch()">×</a>
+                    <input type="text" class="search-style-responsive" placeholder="Busque por algo ...">
+                    </div>
+
+                <button class="openbtn" onclick="openNav()"> ☰ </button>
+                <div class="sidepanel" id="mysidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="profile.html" class="profile-link"> <img src="/assets/image_icon.jpg"
+                            class="img-user-style">Luiz Eduardo</a>
+                    <h1 class="sidebar-title">Menu</h1>
+                    <a href="index.html" class="menu-link"><img src="/assets/Icon.svg"> Editor de codigo</a>
+                    <a href="index.html" class="menu-link"><img src="/assets/Iconpg_2.svg"> Comunidade</a>
+                </div>
+            </div>
         </div>
         <div class="item1">
-            <div class="menu-style">            
-                <h1 class="sidebar-title">Menu</h1> 
-                    <a href="index.html" class="menu-link"><img src="/assets/Icon.svg">  Editor de codigo</a>
-    
-          
-                    <a href="index.html" class="menu-link"><img src="/assets/Iconpg_2.svg"> Comunidade</a>
-          
+            <div class="menu-style">
+                <h1 class="sidebar-title">Menu</h1>
+                <a href="index.html" class="menu-link"><img src="/assets/Icon.svg"> Editor de codigo</a>
+                <a href="index.html" class="menu-link"><img src="/assets/Iconpg_2.svg"> Comunidade</a>
             </div>
         </div>
         <div class="item2">
@@ -61,33 +72,32 @@
                         </textarea>
                     </form>
                 </div>
-            </div> 
+            </div>
 
             <button class="btn-highlight">Visualizar com o highlight
             </button>
-
-
         </div>
         <div class="item3">
-            <div class="menu-style">            
+            <div class="menu-style">
                 <h1 class="sidebar-title">Seu projeto</h1>
                 <input type="text" class="projeto-style" placeholder="Nome do Seu projeto"> </input>
                 <input type="text" class="describe-style" placeholder="Descrição do Seu projeto"></input>
                 <br>
                 <h1 class="sidebar-title">Personalização</h1>
-                    <div class="box-select">
-                        <select>
-                            <option class="selected"> Selecione</option>
-                            <option class="selected"> JavaScript </option>
-                            <option class="selected">  HMTL </option>
-                            <option class="selected"> CSS </option>
-                        </select>
-                        <input type="color" value="#6BD1FF">
-                    </div>   
+                <div class="box-select">
+                    <select class="lang-select">
+                        <option class="selected"> Selecione</option>
+                        <option class="selected"> JavaScript </option>
+                        <option class="selected"> HMTL </option>
+                        <option class="selected"> CSS </option>
+                    </select>
+                    <input type="color" value="#6BD1FF" class="color-select">
+                </div>
                 <button class="btn-save">Salvar projeto </button>
             </div>
-        </div> 
-        <div class="item4"></div> 
+        </div>
+        <div class="item4"></div>
     </div>
 </body>
+
 </html>
