@@ -1,5 +1,6 @@
 body{
     background-color: #051D3B ;
+    margin: 20px;
     padding-right: 30px;
     padding-left: 30px;
     font-family: 'Inter', sans-serif;
@@ -248,3 +249,64 @@ input[type=color] {
     font-size: 16px;
     line-height: 24px;
 }
+
+.sidepanel{
+    display: none;
+}
+.openbtn{
+    display: none;
+}
+
+
+/*---- Responsive ---
+
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    }
+
+
+*/
+
+
+@media screen and (max-width: 992px) {
+   
+     #profileHidden{
+        display: none;
+    }
+    .openbtn{
+        display: inline;
+        font-size: 40px;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        padding: 5px 50px;
+        border: none;
+    }.sidepanel  {
+        display: block;
+        width: 300px;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #051d3bc4 ;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+      }.sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        transition: 0.3s;
+      }.sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        color: white;
+      }
+
+  }
